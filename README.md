@@ -20,7 +20,7 @@ to takeover and synchronize client/server interactions.
 
 # Content
 
-2 directory are available :
+2 directories are available :
 
 	* server : TCP server code
 	* client : TCP client code
@@ -28,29 +28,29 @@ to takeover and synchronize client/server interactions.
 
 # Give it a try : Server side
 
-$ cd server
-$ make
-$ ./server -h
-Usage: ./server [OPTION...]
-  -a, --listen-address		Address to bind TCP listener on
-  -p, --listen-port		Port to bind TCP listener on
-  -b, --listen-backlog		TCP listener backlog
-  -t, --takeover-path		Takeover channel unix domain path
-  -T, --takeover		Perform takeover operation
-  -h, --help			Display this help message
-$ ./server -a 127.0.0.1 -p 1234 -t /tmp/.takeover
+	$ cd server
+	$ make
+	$ ./server -h
+	Usage: ./server [OPTION...]
+	  -a, --listen-address		Address to bind TCP listener on
+	  -p, --listen-port		Port to bind TCP listener on
+	  -b, --listen-backlog		TCP listener backlog
+	  -t, --takeover-path		Takeover channel unix domain path
+	  -T, --takeover		Perform takeover operation
+	  -h, --help			Display this help message
+	$ ./server -a 127.0.0.1 -p 1234 -t /tmp/.takeover
 
 
 # Give it a try : Client side
 
-$ cd client
-$ make
-$ ./client -h
-Usage: ./client [OPTION...]
-  -a, --listen-address		Log messages to local console
-  -p, --listen-port		Detailed log messages
-  -h, --help			Display this help message
-$ ./client -a 127.0.0.1 -p 1234
+	$ cd client
+	$ make
+	$ ./client -h
+	Usage: ./client [OPTION...]
+	  -a, --listen-address		Log messages to local console
+	  -p, --listen-port		Detailed log messages
+	  -h, --help			Display this help message
+	$ ./client -a 127.0.0.1 -p 1234
 
 
 # Having fun
