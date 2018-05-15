@@ -88,8 +88,9 @@ inet_stosockaddr(char *ip, const char *port, struct sockaddr_storage *addr)
 }
 
 static char *
-inet_sockaddrtos2(struct sockaddr_storage *addr, char *addr_str)
+inet_sockaddrtos(struct sockaddr_storage *addr)
 {
+	static char addr_str[INET6_ADDRSTRLEN];
 	void *addr_ip;
 
 	if (addr->ss_family == AF_INET6) {
@@ -103,14 +104,6 @@ inet_sockaddrtos2(struct sockaddr_storage *addr, char *addr_str)
 	if (!inet_ntop(addr->ss_family, addr_ip, addr_str, INET6_ADDRSTRLEN))
 		return NULL;
 
-	return addr_str;
-}
-
-static char *
-inet_sockaddrtos(struct sockaddr_storage *addr)
-{
-	static char addr_str[INET6_ADDRSTRLEN];
-	inet_sockaddrtos2(addr, addr_str);
 	return addr_str;
 }
 
