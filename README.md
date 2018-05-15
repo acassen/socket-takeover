@@ -47,8 +47,8 @@ to takeover and synchronize client/server interactions.
 	$ make
 	$ ./client -h
 	Usage: ./client [OPTION...]
-	  -a, --listen-address		Log messages to local console
-	  -p, --listen-port		Detailed log messages
+	  -a, --connect-address		Connection Address
+	  -p, --connect-port		Connection Port
 	  -h, --help			Display this help message
 	$ ./client -a 127.0.0.1 -p 1234
 

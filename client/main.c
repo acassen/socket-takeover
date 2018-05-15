@@ -150,8 +150,8 @@ static void
 usage(const char *prog)
 {
 	fprintf(stderr, "Usage: %s [OPTION...]\n", prog);
-	fprintf(stderr, "  -a, --listen-address		Log messages to local console\n");
-	fprintf(stderr, "  -p, --listen-port		Detailed log messages\n");
+	fprintf(stderr, "  -a, --connect-address	Connection Address\n");
+	fprintf(stderr, "  -p, --connect-port		Connection Port\n");
 	fprintf(stderr, "  -h, --help			Display this help message\n");
 }
 
@@ -167,8 +167,8 @@ parse_cmdline(int argc, char **argv)
 	char *server_addr = NULL, *server_port = NULL;
 
 	struct option long_options[] = {
-		{"server-address",	required_argument,	NULL, 'a'},
-		{"server-port",		required_argument,	NULL, 'p'},
+		{"connect-address",	required_argument,	NULL, 'a'},
+		{"connect-port",	required_argument,	NULL, 'p'},
 		{"help",                no_argument,		NULL, 'h'},
 		{NULL,                  0,			NULL,  0 }
 	};
